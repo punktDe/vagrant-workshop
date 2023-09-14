@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "punktde/freebsd-132-ufs"
+
+  config.vm.provision 'shell', inline: <<-SHELL
+    export ASSUME_ALWAYS_YES=yes
+    pkg install apache24
+    sysrc apache24_enable=YES
+    service apache24 start
+  SHELL
+end
