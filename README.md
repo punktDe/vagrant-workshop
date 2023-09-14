@@ -34,3 +34,8 @@ branch to see my suggested implementations.
 * [Ansible integration](ansible.md)
 * Practical: [deploy a distributed application with Ansible](06_ansible/Vagrantfile)
 * [How boxes are built](boxbuilding.md)
+
+## Related projects:
+
+* [Vagrant OPNsense](https://github.com/punktDe/vagrant-opnsense) - run an OPNsense firewall on your desktop for development
+* [Vagrant FreeBSD Boxbuilder](https://github.com/punktDe/vagrant-freebsd-boxbuilder) - automatically build boxes
