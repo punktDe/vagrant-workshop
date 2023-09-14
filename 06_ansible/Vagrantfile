@@ -19,7 +19,9 @@ Vagrant.configure(2) do |config|
     sed -i '' '/127\.0\.1\.1/d' /etc/hosts
 
     # add the IP addresses of the three nodes
-    grep -q node1 /etc/hosts || cat /var/vagrant/hosts >>/etc/hosts
+    grep -q node1 /etc/hosts || echo "192.168.56.51 node1" >>/etc/hosts
+    grep -q node2 /etc/hosts || echo "192.168.56.52 node2" >>/etc/hosts
+    grep -q node3 /etc/hosts || echo "192.168.56.53 node3" >>/etc/hosts
   SHELL
 
   # configuration for individual VMs
