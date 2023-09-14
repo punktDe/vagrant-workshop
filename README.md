@@ -31,6 +31,6 @@ branch to see my suggested implementations.
 * Practical: [experiment with file sharing](04_filesharing/Vagrantfile)
 * [Multiple VMs](multivm.md)
 * Practical: [bring up three boxes in parallel](05_multivm/Vagrantfile)
-* Practical: provision a Galera cluster
-* How boxes are built
-* Conclusion and questions
+* [Ansible integration](ansible.md)
+* Practical: [deploy a distributed application with Ansible](06_ansible/Vagrantfile)
+* [How boxes are built](boxbuilding.md)
