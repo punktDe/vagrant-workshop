@@ -11,12 +11,6 @@ system of choice to follow the practical parts of the tutorial. I'm using NFS fo
 sharing, so Windows is probably out. Mac OS, any BSD that supports VirtualBox, or Linux
 will all do fine.
 
-## Practical exercises
-
-Some of the practical parts take the form of tasks to solve. For these in the `main`
-branch the relevant parts of the Vagrantfiles are removed. Checkout the `solutions`
-branch to see my suggested implementations.
-
 ## Agenda
 
 * [Fundamentals](fundamentals.md)
