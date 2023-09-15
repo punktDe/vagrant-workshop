@@ -6,6 +6,6 @@ Most importantly you need to create a user with
 
 * the name `vagrant`
 * the not-so-secret public key for SSH login
-* passwordless `sudo``
+* passwordless `sudo`
 
 There's already a project for that ;-)
