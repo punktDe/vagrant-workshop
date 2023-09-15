@@ -1,0 +1,54 @@
+- hosts: all
+  tasks:
+
+    - name: configure NTP on all nodes
+      copy:
+        dest: /etc/rc.conf.d/ntpd
+        content: |
+          ntpd_sync_on_start="YES"
+
+    - name: enable and restart NTP on all nodes
+      service:
+        name: ntpd
+        enabled: true
+        state: restarted
+
+    - name: install Redis on all nodes
+      package:
+        name: redis
+        state: present
+
+    - name: configure Redis on replication leader
+      copy:
+        dest: /usr/local/etc/redis.conf
+        content: |
+          daemonize yes
+          bind 0.0.0.0
+          port 6379
+          requirepass secret
+          loglevel notice
+          logfile /var/log/redis/redis.log
+          pidfile /var/run/redis/redis.pid
+          dir /var/db/redis/
+      when: inventory_hostname == 'node1'
+
+    - name: configure Redis on replication followers
+      copy:
+        dest: /usr/local/etc/redis.conf
+        content: |
+          daemonize yes
+          bind 0.0.0.0
+          port 6379
+          replicaof 192.168.56.51 6379
+          masterauth secret
+          loglevel notice
+          logfile /var/log/redis/redis.log
+          pidfile /var/run/redis/redis.pid
+          dir /var/db/redis/
+      when: inventory_hostname != 'node1'
+
+    - name: enable and restart Redis on all nodes
+      service:
+        name: redis
+        enabled: true
+        state: restarted
