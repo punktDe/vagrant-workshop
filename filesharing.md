@@ -5,7 +5,14 @@
 VirtualBox provides a [builtin capability](https://www.virtualbox.org/manual/UserManual.html#sharedfolders)
 to share folders.
 
-Unfortunately it is not supported for FreeBSD guests.
+Unfortunately it is not well supported for FreeBSD guests. While it initially seems
+to work, it's prone to crash the VM.
+
+To disable it us this incantation:
+
+```ruby
+  config.vm.synced_folder '.', '/vagrant', id: 'vagrant-root', disabled: true
+```
 
 ## NFS file sharing
 

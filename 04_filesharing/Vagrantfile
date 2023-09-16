@@ -3,7 +3,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.network 'private_network', ip: '192.168.56.23'
 
-  # share the project directory with the guest
+  # share the project directory with the guest via NFS only
   #
+  config.vm.synced_folder '.', '/vagrant', id: 'vagrant-root', disabled: true
   config.vm.synced_folder '.', '/var/vagrant', :nfs => true, :nfs_version => 3
 end
