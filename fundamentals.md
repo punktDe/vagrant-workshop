@@ -50,3 +50,15 @@ project.
 The state, specific settings, and most important the SSH private key for a project are
 stored in `<project directory>/.vagrant`.
 Template boxes, plugins, global settings are stored in `~/.vagrant.d`.
+
+## FreeBSD specific quirks
+
+Vagrant by default uses `bash` as the shell to execute commands inside the
+box. In the box we use for this tutorial bash is available by default.
+
+In case it isn't you need to specify the shell for your project in
+the `Vagrantfile` like this
+
+```ruby
+  config.ssh.shell = '/bin/sh'
+```
