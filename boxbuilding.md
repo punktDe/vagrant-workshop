@@ -8,4 +8,4 @@ Most importantly you need to create a user with
 * the not-so-secret public key for SSH login
 * passwordless `sudo`
 
-There's already a project for that ;-)
+There's already a project for that ;-) See [top level README](README.md).
