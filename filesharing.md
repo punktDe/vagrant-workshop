@@ -8,7 +8,7 @@ to share folders.
 Unfortunately it is not well supported for FreeBSD guests. While it initially seems
 to work, it's prone to crash the VM.
 
-To disable it us this incantation:
+To disable it use this incantation:
 
 ```ruby
   config.vm.synced_folder '.', '/vagrant', id: 'vagrant-root', disabled: true
@@ -39,6 +39,6 @@ each time you `vagrant up`.
 ### Practical considerations
 
 Vagrant does not create an `/etc/fstab` entry in the guest OS. Therefore each time
-you reboot the guest OS from within the shared folder will not be present.
+you reboot the guest OS from within the VM the shared folder will not be present.
 
 The mount is created dynamically at `vagrant up`.
