@@ -3,7 +3,7 @@
 ## Summary
 
 Hashicorp Vagrant is a powerful platform for local automated creation and deployment of
-virtual machines. This tutorial show the basics and two practical examples of how to use
+virtual machines. This tutorial shows the basics and practical examples of how to use
 Vagrant to create FreeBSD based development environments on a suitable machine.
 
 Participants need an amd64 laptop and VirtualBox and Vagrant installed on their operating
