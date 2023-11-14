@@ -1,7 +1,7 @@
 # Networking fundamentals
 
 [VirtualBox networking](https://www.virtualbox.org/manual/UserManual.html#networkingdetails)
-while porwerful comes with its own set of assumptions and constraints.
+while powerful comes with its own set of assumptions and constraints.
 
 ## NAT network
 
