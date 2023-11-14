@@ -12,7 +12,7 @@ source .envrc
 ansible -m shell -a "freebsd-version" all
 ```
 
-## Run Ansible play to install Redis Ron all nodes
+## Run Ansible play to install Redis on all nodes
 
 ```sh
 ansible-playbook pb_redis.yml
