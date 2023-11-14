@@ -5,7 +5,7 @@ for details.
 
 ## IP address ranges for the host-only network(s)
 
-On Linux, macOS and Solaris Oracle VM VirtualBox will only allow IP addresses in
+On Linux, macOS and Solaris VirtualBox will only allow IP addresses in the
 `192.168.56.0/21` range to be assigned to host-only adapters. For IPv6 only
 link-local addresses are allowed.
 
