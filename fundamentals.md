@@ -15,7 +15,7 @@ The public repo provided by Hashicorp is at https://app.vagrantup.com/
 To import the box for this tutorial from a file use
 
 ```sh
-vagrant box add freebsd-132-ufs.box --name punktde/freebsd-132-ufs
+vagrant box add freebsd-133-ufs.box --name punktde/freebsd-133-ufs
 ```
 
 ## Providers
